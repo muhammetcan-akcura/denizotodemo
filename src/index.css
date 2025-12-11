@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Deniz Oto - Mercedes Tarzı Tasarım Sistemi */
+/* Profesyonel otomotiv sektörü renk paleti */
+/* Gri, koyu ve beyaz tonları ile premium görünüm */
+
+@layer base {
+  :root {
+    /* Mercedes tarzı premium tema */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+
+    --primary: 0 0% 25%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 94%;
+    --secondary-foreground: 0 0% 25%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 0 0% 92%;
+    --accent-foreground: 0 0% 25%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 88%;
+    --input: 0 0% 94%;
+    --ring: 0 0% 25%;
+
+    --radius: 0.75rem;
+
+    /* Mercedes tarzı otomotiv renkleri */
+    --mercedes-silver: 0 0% 75%;
+    --mercedes-dark: 0 0% 20%;
+    --mercedes-charcoal: 0 0% 30%;
+    --mercedes-light: 0 0% 97%;
+    --automotive-blue: 210 100% 50%;
+    --automotive-red: 0 85% 55%;
+    --success-green: 142 76% 36%;
+    --warning-orange: 38 92% 50%;
+    --whatsapp-green: 142 70% 49%;
+    --whatsapp-dark: 142 70% 42%;
+  }
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 400;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+  }
+
+  .font-display {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+  }
+
+  .font-body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+  }
+
+  /* OtoExpert kurumsal stiller */
+  .corporate-card {
+    @apply bg-card border border-border rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300;
+  }
+
+  .auto-card {
+    @apply bg-card border border-border rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300;
+  }
+
+  .corporate-button-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 rounded-lg font-semibold transition-all duration-300 shadow-sm hover:shadow-md;
+  }
+
+  .auto-button-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-lg font-medium transition-all duration-300;
+  }
+
+  .auto-button-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 px-6 py-3 rounded-lg font-medium transition-all duration-300;
+  }
+
+  .corporate-button-secondary {
+    @apply bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300;
+  }
+
+  .corporate-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--corporate-navy)) 100%);
+  }
+
+  .corporate-text-primary {
+    @apply text-foreground font-medium;
+  }
+
+  .corporate-text-secondary {
+    @apply text-muted-foreground;
+  }
+
+  .corporate-badge-success {
+    @apply bg-green-50 text-green-700 border border-green-200 px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .corporate-badge-warning {
+    @apply bg-orange-50 text-orange-700 border border-orange-200 px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .corporate-badge-info {
+    @apply bg-blue-50 text-blue-700 border border-blue-200 px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  /* Hover effects */
+  .corporate-hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+
+  /* Professional shadows */
+  .corporate-shadow {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .corporate-shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  /* WhatsApp buton stilleri */
+  .whatsapp-button {
+    background-color: #25D366 !important;
+    color: white !important;
+    border: none !important;
+  }
+
+  .whatsapp-button:hover {
+    background-color: #128C7E !important;
+    transform: translateY(-1px);
+  }
+
+  .whatsapp-button-small {
+    background-color: #25D366 !important;
+    color: white !important;
+    border: none !important;
+  }
+
+  .whatsapp-button-small:hover {
+    background-color: #128C7E !important;
+  }
+
+  /* Responsive iyileştirmeler */
+  @media (max-width: 640px) {
+    .hero-title {
+      font-size: 2.5rem !important;
+      line-height: 1.2 !important;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.125rem !important;
+    }
+    
+    .search-grid {
+      grid-template-columns: 1fr !important;
+      gap: 0.75rem !important;
+    }
+    
+    .button-group {
+      flex-direction: column !important;
+      gap: 0.75rem !important;
+    }
+    
+    .hero-images {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 0.75rem !important;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 768px) {
+    .search-grid {
+      grid-template-columns: 1fr 1fr !important;
+    }
+    
+    .hero-images {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .search-grid {
+      grid-template-columns: 2fr 1fr 1fr 1fr !important;
+    }
+  }
+
+  /* Otomotiv temalı footer stilleri */
+  .automotive-footer {
+    background: linear-gradient(135deg, 
+      hsl(var(--mercedes-dark)) 0%, 
+      hsl(var(--mercedes-charcoal)) 50%, 
+      hsl(var(--mercedes-dark)) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .automotive-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      hsl(var(--mercedes-silver)) 20%, 
+      hsl(var(--mercedes-silver)) 80%, 
+      transparent 100%);
+  }
+
+  .automotive-footer::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, 
+      rgba(255,255,255,0.03) 0%, 
+      transparent 70%);
+    pointer-events: none;
+  }
+
+  .footer-section {
+    position: relative;
+    z-index: 2;
+  }
+
+  .footer-logo {
+    background: linear-gradient(135deg, 
+      hsl(var(--mercedes-silver)) 0%, 
+      hsl(var(--background)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .footer-link {
+    @apply text-gray-300 hover:text-white transition-all duration-300 relative;
+  }
+
+  .footer-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: hsl(var(--mercedes-silver));
+    transition: width 0.3s ease;
+  }
+
+  .footer-link:hover::after {
+    width: 100%;
+  }
+
+  .footer-icon {
+    @apply w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center text-gray-300 hover:bg-gray-700 hover:text-white transition-all duration-300;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+
+  .footer-icon:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.2);
+  }
+
+  .automotive-pattern {
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(255,255,255,0.02) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(255,255,255,0.02) 0%, transparent 50%);
+  }
+
+  /* Premium Navbar Stilleri */
+  .premium-navbar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .navbar-logo {
+    background: linear-gradient(135deg, 
+      hsl(var(--mercedes-dark)) 0%, 
+      hsl(var(--mercedes-charcoal)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .navbar-link {
+    @apply text-gray-700 hover:text-gray-900 font-medium transition-all duration-300 relative;
+    position: relative;
+  }
+
+  .navbar-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+      hsl(var(--mercedes-charcoal)), 
+      hsl(var(--mercedes-dark)));
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  .navbar-link:hover::after {
+    width: 100%;
+  }
+
+  .navbar-contact {
+    @apply bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-medium transition-all duration-300;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-contact:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .navbar-whatsapp {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    @apply text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300;
+    box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
+  }
+
+  .navbar-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  }
+
+  .mobile-menu {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  /* Siyah-Beyaz Header Stilleri */
+  .bw-header {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    border-bottom: 2px solid #333333;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .bw-header .navbar-logo {
+    background: linear-gradient(135deg, #ffffff 0%, #e5e5e5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bw-header .navbar-link {
+    @apply text-gray-300 hover:text-white font-medium transition-all duration-300;
+  }
+
+  .bw-header .navbar-link::after {
+    background: linear-gradient(90deg, #ffffff, #cccccc);
+  }
+
+  .bw-header .navbar-contact {
+    @apply bg-gray-800 hover:bg-gray-700 text-gray-200 border-gray-600;
+  }
+
+  .bw-header .navbar-whatsapp {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  }
+
+  /* Siyah-Beyaz Footer Stilleri */
+  .bw-footer {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bw-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      #ffffff 20%, 
+      #ffffff 80%, 
+      transparent 100%);
+  }
+
+  .bw-footer::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, 
+      rgba(255,255,255,0.05) 0%, 
+      transparent 70%);
+    pointer-events: none;
+  }
+
+  .bw-footer .footer-logo {
+    background: linear-gradient(135deg, #ffffff 0%, #cccccc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bw-footer .footer-link {
+    @apply text-gray-400 hover:text-white transition-all duration-300;
+  }
+
+  .bw-footer .footer-link::after {
+    background: #ffffff;
+  }
+
+  .bw-footer .footer-icon {
+    @apply bg-gray-900 hover:bg-gray-800 text-gray-400 hover:text-white;
+    border: 1px solid #333333;
+  }
+
+  .bw-footer .footer-icon:hover {
+    border-color: #555555;
+    box-shadow: 0 4px 12px rgba(255,255,255,0.1);
+  }
+
+  /* Hero Section Efektleri */
+  .hero-section {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+      radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, rgba(249, 115, 22, 0.05) 0%, transparent 50%);
+    animation: heroFloat 20s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%),
+      linear-gradient(45deg, rgba(59, 130, 246, 0.03) 0%, transparent 30%);
+    pointer-events: none;
+  }
+
+  @keyframes heroFloat {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(-10px, -10px) rotate(1deg); }
+    50% { transform: translate(10px, -5px) rotate(-1deg); }
+    75% { transform: translate(-5px, 10px) rotate(0.5deg); }
+  }
+
+  /* Tasarımlı Sol Menü */
+  .hero-menu {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    box-shadow: 
+      0 20px 40px rgba(0, 0, 0, 0.1),
+      0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+  }
+
+  .hero-menu-item {
+    @apply relative overflow-hidden transition-all duration-300;
+    background: linear-gradient(135deg, transparent 0%, rgba(59, 130, 246, 0.02) 100%);
+  }
+
+  .hero-menu-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .hero-menu-item:hover::before {
+    left: 100%;
+  }
+
+  .hero-menu-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.2);
+    border-left: 3px solid #3B82F6;
+  }
+
+  .hero-badge {
+    background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+    animation: badgePulse 3s ease-in-out infinite;
+  }
+
+  @keyframes badgePulse {
+    0%, 100% { box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3); }
+    50% { box-shadow: 0 6px 25px rgba(59, 130, 246, 0.5); }
+  }
+
+  .hero-title {
+    background: linear-gradient(135deg, #1f2937 0%, #3B82F6 50%, #8B5CF6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: titleShine 4s ease-in-out infinite;
+    background-size: 200% 200%;
+  }
+
+  @keyframes titleShine {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  .floating-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .floating-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.05));
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .floating-circle:nth-child(1) {
+    width: 60px;
+    height: 60px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+
+  .floating-circle:nth-child(2) {
+    width: 40px;
+    height: 40px;
+    top: 60%;
+    right: 15%;
+    animation-delay: 2s;
+  }
+
+  .floating-circle:nth-child(3) {
+    width: 80px;
+    height: 80px;
+    bottom: 30%;
+    left: 5%;
+    animation-delay: 4s;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+  }
+}
